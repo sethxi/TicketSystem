@@ -10,7 +10,7 @@ app.get('/', function(req, res){
 });
 
 io.sockets.on('connection', function(socket){
-	socket.on('send message', function(data){
-		io.sockets.emit('new message', data);
+	socket.on('newTicket', function(data){
+		io.sockets.emit('', data);
 	});
 });
